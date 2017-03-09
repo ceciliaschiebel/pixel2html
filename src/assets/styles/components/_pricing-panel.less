@@ -1,0 +1,155 @@
+// pricing
+.light-border-bottom{
+    border-bottom: 1px solid lighten(@text-color, 35%);
+    padding-bottom: 10px;
+}
+
+.pricing-panel_no-gap{
+    padding: 0;
+}
+.pricing-panel{
+    .pricing-panel_no-gap:first-of-type{
+      .pricing-panel__item,
+      .pricing-panel__item_active{
+        border: none;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid lighten(@text-color, 35%);
+      }
+    }
+    .pricing-panel_no-gap:last-of-type{
+      .pricing-panel__item,
+      .pricing-panel__item_active{
+        border-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+}
+
+.pricing-panel__item{
+    padding: 30px;
+    background-color: white;
+    color: @text-color;
+    .pricing-panel__pricing-head{
+        .light-border-bottom();
+        h5{
+            color: @blue
+        }
+    }
+    .pricing-panel__pricing-content{
+        .light-border-bottom();
+        padding-top: 10px;
+        .pricing-panel__price{
+            margin-top: 10px;
+            font-size: 50px;
+            color: @title-color;
+        }
+        .pricing-panel__price-text{
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+    }
+    .pricing-panel__features-link{
+        color: @text-color;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .pricing-panel__pricing-features{
+        padding-top: 20px;
+        text-align: left;
+        li{
+            margin-bottom: 30px;
+        }
+        .pricing-panel__pricing-feature_active{
+            color: darken(@text-color, 10%);
+            .mod {
+                color: @green;
+                margin-right: 14px;
+            }
+        }
+        .pricing-panel__pricing-feature_inactive{
+            margin-left: 30px;
+            color: lighten(@text-color, 15%);
+        }
+    }
+    .pricing-panel__pricing-footer{
+        padding-top: 30px;
+        .pricing-panel__btn-get-plan{
+            color: @blue;
+            font-weight: @bold-font;
+        }
+    }
+}
+// active
+.pricing-panel__item_active{
+    .pricing-panel__item;
+    background-color: @blue-bg;
+    color: white;
+    .pricing-panel__pricing-head{
+        h5{
+            color: white
+        }
+    }
+    .pricing-panel__pricing-content{
+        .pricing-panel__price{
+            color: white;
+        }
+    }
+    .pricing-panel__features-link{
+        color: white;
+    }
+    .pricing-panel__pricing-features{
+      .pricing-panel__pricing-feature_active, {
+            color: white;
+        }
+    }
+    .pricing-panel__pricing-footer{
+        .pricing-panel__btn-get-plan{
+            .btn-cta
+        }
+    }
+}
+
+
+/* Small devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  .pricing-panel{
+    .pricing-panel_no-gap:first-of-type{
+      .pricing-panel__item,
+      .pricing-panel__item_active{
+        border: none;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid lighten(@text-color, 35%);
+      }
+    }
+    .pricing-panel_no-gap:last-of-type{
+      .pricing-panel__item,
+      .pricing-panel__item_active{
+        border-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2) and 
+(min-resolution: 192dpi) and (min-width: 993px) { 
+    
+    .pricing-panel{
+        .pricing-panel_no-gap:first-of-type{
+            .pricing-panel__item,
+            .pricing-panel__item_active{
+                border-right: 2px solid lighten(@text-color, 35%);
+                border-bottom: 0px;
+                margin-right: -1px;
+            }
+        }
+    }
+}

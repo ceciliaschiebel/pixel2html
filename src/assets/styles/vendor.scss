@@ -1,0 +1,34 @@
+/**
+* Pixel2HTML - 123
+*/
+
+$icon-font-path: "/fonts/" !default;
+$img-path: "/images/" !default;
+
+@function font-path($path) {
+  @return $path;
+}
+
+@import "bootstrap";
+@import "slick.scss";
+
+@function image-url($url) {
+  @return url($img-path + $url );
+}
+
+@function font-url($url) {
+  @return url($icon-font-path + $url );
+}
+
+@import "slick-theme.scss";
+
+// custom font "module"
+$icomoon-font-path: "/fonts/" !default;
+
+$mod-arrow-left: "\e900";
+$mod-arrow-right: "\e901";
+$mod-checkmark: "\e902";
+$mod-sphere: "\e9c9";
+@import "style.scss";
+
+

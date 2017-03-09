@@ -1,0 +1,18 @@
+.btn-cta{
+  background-color: @green;
+  border-color: @green;
+  color: white;
+  font-weight: @bold-font;
+  &:hover,
+  &:focus{
+    background-color: darken(@green, 5%);
+    border-color: darken(@green, 5%);
+    color: white;
+  }
+}
+
+.btn-cta_lg{
+  .btn-cta;
+  padding: 15px 30px;
+  font-size: 14px;
+}

@@ -1,0 +1,149 @@
+/**
+* Pixel2HTML - 123/123
+* Screen 1
+*/
+@font-family: 'Roboto', sans-serif;
+@light-font: 300;
+@regular-font: 400;
+@bold-font: 700;
+
+@title-color: #43484d;
+@text-color: #86939e;
+@text-light-color: darken(white, 5%);
+@blue: #358ed7;
+
+@green: #7dc855;
+
+@light-bg: #F9F9F9;
+@blue-bg: #39add1;
+@dark-bg: #5e6977;
+@darker-bg: #545e6b;
+
+body{
+    font-family: @font-family;
+    font-weight: @light-font;
+}
+
+.content{
+    text-align: center;
+    margin-top: 100px;
+    z-index: 0;
+    // position: absolute;
+}
+
+.addMarginBottom{
+    margin-bottom: 5%;
+}
+
+.section{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .section__main-title{
+        color: @title-color;
+        font-weight: @light-font;
+        font-size: 2.8em;
+    }
+    .section__description{
+        color: @text-color;      
+        font-size: 20px;
+        .addMarginBottom;
+    }
+}
+
+#features{
+    background: url("/images/bg-laptop.png") no-repeat;
+    background-size: auto 400px;
+    background-position-y: 80%;
+    min-height: 525px;
+}
+
+#pricing{
+    background-color: @light-bg;
+    background: linear-gradient(
+    to bottom,
+    @light-bg,
+    @light-bg 85%,
+    @dark-bg 85%,
+    @dark-bg
+  );
+}
+
+#learn-more{
+    background-color: @dark-bg;
+    color: @text-light-color;
+    .section__main-title{
+        color: @text-light-color;
+    }
+    .section__description{
+        color: @text-light-color;
+    }
+}
+.clients-logos{
+    .clients-logos__logo{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        // margin: 20px 0;
+        img{
+            // vertical-align: center;
+            opacity: 0.3;
+        }
+    }
+}
+.clients-text{
+    font-weight: @regular-font;
+    font-size: 16px;
+}
+
+#contact{
+    background-color: @darker-bg;
+    color: @text-light-color;
+    font-size: 16px;
+    a{
+        color: @text-light-color;
+    }
+}
+
+.main-features{
+    .main-features__icon{
+        margin-top: 10px;
+    }
+    .main-features__title{
+        color: @title-color;
+    }
+    .main-features__description{
+        color: @text-color;
+        font-size: 16px;
+    }
+}
+/* Small devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+    .section{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .addMarginBottom{
+        margin-bottom: 10%
+    }
+    #features{
+        background: none;
+        min-height: 0;
+    }
+    .main-features{
+        .main-features__item{
+            .addMarginBottom;
+        }
+    }
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2) and 
+(min-resolution: 192dpi) { 
+    .section,
+    footer{
+        margin-top: -1px;
+    }
+    .content{
+        margin-top: 50px;
+    }
+}

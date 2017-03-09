@@ -1,0 +1,37 @@
+{
+  "name": "pixel2html-123-123",
+  "description": "pixel2html 123/123",
+  "license": "MIT",
+  "repository": "http://code.pixel2html.com",
+  "version": "1.0.3",
+  "scripts": {
+    "start": "npm install && bower install ",
+    "code": "gulp serve",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "browser-sync": "2.6.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "require-dir": "^0.3.0",
+    "response.js": "^0.9.1",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "gulp-bootlint": "^0.8.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-uncss": "^1.0.6"
+  }
+}
